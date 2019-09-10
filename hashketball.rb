@@ -1,5 +1,4 @@
 require 'pry'
-#not completed, passing 4 out of 10 tests
 
 def game_hash
   {
@@ -213,8 +212,8 @@ def most_points_scored
         team[:players].each do |player_hash|
         if array.sort[-1] == player_hash[:points]
           return player_hash[:player_name]
-          binding.pry
         end
       end
     end
+    binding.pry
 end
