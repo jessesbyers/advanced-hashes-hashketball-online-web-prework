@@ -116,9 +116,7 @@ def game_hash
 }
 end
 
-
-## passed
- def num_points_scored(players_name)
+def num_points_scored(players_name)
   game_hash.each do |place, team|
     team.each do |attribute, data|
       if attribute == :players
@@ -132,7 +130,6 @@ end
 end
 end
 
-#passed
 def shoe_size(players_name)
   game_hash.each do |place, team|
       team.each do |attribute, data|
@@ -147,7 +144,6 @@ end
 end
 end
 
-# passing
 def team_colors(team_name)
   game_hash.each do |place, team|
     if team[:team_name] == team_name
@@ -156,7 +152,6 @@ def team_colors(team_name)
  end
 end
 
-# passing
 def team_names
   teams = []
   game_hash.each do |place, team|
@@ -165,7 +160,6 @@ def team_names
   teams
 end
 
-# passing
 def player_numbers(team_name)
   jerseys = []
   game_hash.each do |place, team|
@@ -182,7 +176,6 @@ def player_numbers(team_name)
   jerseys.uniq
 end
 
-#passing
 def player_stats(name)
   stats = {}
   game_hash.each do |place, team|
@@ -209,6 +202,8 @@ def big_shoe_rebounds
       end
     end
 end
+end
 
-binding.pry
+def most_points_scored
+  
 end
