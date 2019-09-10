@@ -203,7 +203,7 @@ def big_shoe_rebounds
 end
 end
 
-#not passing
+#not passing - returning the wrong name
 def most_points_scored
   array = []
   game_hash.each do |place, team|
@@ -211,7 +211,7 @@ def most_points_scored
         array << player_hash[:points]
       end
       team[:players].each do |player_hash|
-        sorted_array = array.sort
+        sorted_array = array.sort.uniq
         if sorted_array[-1] == player_hash[:points]
          return player_hash[:player_name]
        end
