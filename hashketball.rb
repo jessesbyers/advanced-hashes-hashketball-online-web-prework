@@ -215,7 +215,6 @@ def most_points_scored
         sorted_array = array.sort.uniq.reverse
         if sorted_array[0] == player_hash[:points]
          return player_hash[:player_name]
-         end
        end
        end
      end
