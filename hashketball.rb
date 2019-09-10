@@ -211,8 +211,8 @@ def most_points_scored
         array << player_hash[:points]
       end
       team[:players].each do |player_hash|
-        sorted_array = array.sort.uniq
-        if sorted_array[-1] == player_hash[:points]
+        sorted_array = array.sort.uniq.reverse
+        if sorted_array[0] == player_hash[:points]
          return player_hash[:player_name]
        end
        end
