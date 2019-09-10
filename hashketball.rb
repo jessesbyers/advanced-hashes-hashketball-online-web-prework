@@ -214,5 +214,4 @@ def most_points_scored
         if array.last == player_hash[:points]
          player_hash[:player_name]
       end
-    end
 end
