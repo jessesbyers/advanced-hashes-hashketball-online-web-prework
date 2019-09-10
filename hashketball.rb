@@ -203,14 +203,15 @@ def big_shoe_rebounds
 end
 end
 
+#not passing
 def most_points_scored
   array = []
   game_hash.each do |place, team|
       team[:players].each do |player_hash|
         array << player_hash[:points]
-        array.sort!
-        if array.last == player_hash[:points]
-         player_hash[:player_name]
+      end
+        if array.sort![-1] == player_hash[:points]
+         return player_hash[:player_name]
        end
        end
       end
