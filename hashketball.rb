@@ -214,5 +214,4 @@ def most_points_scored
          return player_hash[:player_name]
        end
        end
-      end
 end
