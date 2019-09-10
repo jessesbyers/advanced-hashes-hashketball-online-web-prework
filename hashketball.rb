@@ -210,8 +210,10 @@ def most_points_scored
       team[:players].each do |player_hash|
         array << player_hash[:points]
       end
+      team[:players].each do |player_hash|
         if array.sort![-1] == player_hash[:points]
          return player_hash[:player_name]
        end
        end
+     end
 end
