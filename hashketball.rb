@@ -209,6 +209,7 @@ def most_points_scored
       place[team][:players].each do |player_hash|
         array << player_hash[:points]
       end
+
       binding.pry
 
 #        if array.sort[-1] == player_hash[:points]
@@ -216,4 +217,6 @@ def most_points_scored
 
 #      end
     end
+    array.sort[-1]
+
 end
