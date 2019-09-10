@@ -205,10 +205,16 @@ end
 
 #not passing - returning the wrong name -
 #I think it is using just the first team, although the array included all 10 players points to start with
+
+# bonus #most_points_scored returns Ben Gordon
+#      Failure/Error: expect(most_points_scored).to eq("Ben Gordon")
+#        expected: "Ben Gordon"
+#             got: "Mason Plumlee"
+
 def most_points_scored
   array = []
   game_hash.each do |place, team|
-      team[:players].each do |player_hash|
+      place[:players].each do |player_hash|
         array << player_hash[:points]
       end
         team[:players].each do |player_hash|
