@@ -214,8 +214,7 @@ def most_points_scored
       end
         if sorted_array[-1] == player_hash[:points]
          return player_hash[:player_name]
-       end
-     end
+    
        end
      end
      binding.pry
