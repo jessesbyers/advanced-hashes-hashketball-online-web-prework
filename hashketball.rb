@@ -210,7 +210,7 @@ def most_points_scored
         array << player_hash[:points]
         array.sort!
   binding.pry
-        if array.last == player_hash[:points]
+        if array.last == team[:players][:points]
          player_hash[:player_name]
       end
       end
