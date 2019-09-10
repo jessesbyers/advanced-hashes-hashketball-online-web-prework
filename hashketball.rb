@@ -212,9 +212,12 @@ def most_points_scored
         away[:players].each do |player_hash|
         array << player_hash[:points]
       end
-        
+      home[:players].each do |player_hash|
+        away[:players].each do |player_hash|
         if array.sort[-1] == player_hash[:points]
-          return player_hash[:player_name].to_s
+          return player_hash[:player_name]
+        end
+      end
       end
     end
   end
