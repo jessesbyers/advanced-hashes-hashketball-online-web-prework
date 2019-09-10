@@ -219,9 +219,9 @@ def most_points_scored
         while counter <10
         array << player_hash[:points]
         counter += 1
+        binding.pry
       end
       array.sort!
-
         if array[-1] == player_hash[:points]
           return player_hash[:player_name]
     end
