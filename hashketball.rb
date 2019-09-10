@@ -207,13 +207,14 @@ end
 #I think it is using just the first team, although the array included all 10 players points to start with
 def most_points_scored
   array = []
-  sorted_array = array.sort
   game_hash.each do |place, team|
       team[:players].each do |player_hash|
         array << player_hash[:points]
-        if sorted_array[-1] == player_hash[:points]
-         return player_hash[:player_name]
+      end
+        team[:players].each do |player_hash|
+        if array.sort[-1] == player_hash[:points]
+          return player_hash[:player_name].to_s
       end
     end
   end
-end
+  end
