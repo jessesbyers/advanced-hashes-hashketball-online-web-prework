@@ -213,12 +213,16 @@ end
 
 def most_points_scored
   array = []
+  counter = 0
   game_hash.each do |place, team|
       team[:players].each do |player_hash|
+        while counter <10
         array << player_hash[:points]
-        if array.sort[-1] == player_hash[:points]
+        counter += 1
+        array.sort!
+      end
+        if array[-1] == player_hash[:points]
           return player_hash[:player_name]
-    
     end
     end
   end
