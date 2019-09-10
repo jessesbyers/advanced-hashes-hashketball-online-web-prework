@@ -218,6 +218,6 @@ def most_points_scored
 
 #      end
     end
-    array.sort[-1]
+    array[-1]
 
 end
